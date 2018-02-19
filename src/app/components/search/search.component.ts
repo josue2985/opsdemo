@@ -12,7 +12,7 @@ export class SearchComponent{
   termino:string = undefined;
 
   constructor( private route:ActivatedRoute,
-               private _ps:ProductosService) {
+               public _ps:ProductosService) {
 
     route.params.subscribe( parametros=>{
 
@@ -22,7 +22,5 @@ export class SearchComponent{
       _ps.buscar_producto( this.termino  )
 
   });
-
-
-
+}
 }
